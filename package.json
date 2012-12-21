@@ -1,0 +1,23 @@
+{
+  "author": "Arnaud Berthomier <arnaud.bethomier@af83.com>",
+  "name": "bowerball",
+  "description": "Stream tarballs for bower components over HTTP.",
+  "keywords": ["bower", "components", "tarball", "tar"],
+  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/oz/bowerball"
+  },
+  "bin": {
+    "bowerball": "./index.js"
+  },
+  "engines": {
+    "node": "~0.8"
+  },
+  "dependencies": {
+    "bower":    "~0.6",
+    "tar":      "~0.1",
+    "fstream":  "~0.1",
+    "temp":     "~0.4",
+    "rimraf":   "~2.0"
+  }
+}
