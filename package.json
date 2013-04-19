@@ -14,10 +14,10 @@
     "node": "~0.8"
   },
   "dependencies": {
-    "bower":    "~0.6",
+    "bower":    "~0.8",
     "tar":      "~0.1",
     "fstream":  "~0.1",
-    "temp":     "~0.4",
+    "temp":     "~0.5",
     "rimraf":   "~2.0"
   }
 }
