@@ -11,7 +11,7 @@ var http    = require('http'),
     rimraf  = require('rimraf'),
 
     // HTTP Server config
-    serverPort   = 8080,
+    serverPort   = process.env.PORT || 8080,
     serverListen = '127.0.0.1';
 
 // Send an error response in plain-text.

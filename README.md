@@ -5,7 +5,8 @@ component files.  But it's all [zyll]'s fault really.
 
 It is more a proof of concept than a “enterprise-ready” thing that you should
 put in production right now.  That say, you're welcome to hack and send
-pull-requests.
+pull-requests.  A running instance is available on Heroku:
+http://bowerball.herokuapp.com
 
 # Setup
 
@@ -54,7 +55,7 @@ $
 
 # License
 
-Copyright © 2012 Arnaud Berthomier. Distributed under the MIT License. See
+Copyright © 2013 Arnaud Berthomier. Distributed under the MIT License. See
 LICENSE.txt for further details.
 
 [bower]: https://github.com/twitter/bower
