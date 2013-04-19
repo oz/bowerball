@@ -12,7 +12,7 @@ var http    = require('http'),
 
     // HTTP Server config
     serverPort   = process.env.PORT || 8080,
-    serverListen = '127.0.0.1';
+    serverListen = '0.0.0.0';
 
 // Send an error response in plain-text.
 var respondText = function respondText(res, code, text) {
