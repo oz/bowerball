@@ -83,7 +83,9 @@ var rm = function rm(path) {
 http.createServer(function (req, res) {
   // Only accept POST requests
   if ('POST' !== req.method) {
-    return respondText(res, 405, 'Method not allowed');
+    res.statusCode = 303;
+    res.setHeader('Location', 'https://github.com/oz/bowerball');
+    return res.end();
   }
 
   // Expect a component.json to be POST-ed
