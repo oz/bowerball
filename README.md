@@ -61,11 +61,28 @@ And let bowerball serve that to you:
 
 ```
 $ curl -sX POST -d @foo.json http://localhost:8080/ | tar -tv
-drwxr-xr-x 1000/1000         0 2012-12-20 17:52 components/jquery/
--rw-r--r-- 1000/1000       591 2012-12-20 15:56 components/jquery/composer.json
--rw-r--r-- 1000/1000       366 2012-12-20 17:52 components/jquery/component.json
--rw-r--r-- 1000/1000     93637 2012-12-20 15:56 components/jquery/jquery.min.js
--rw-r--r-- 1000/1000    275529 2012-12-20 15:56 components/jquery/jquery.js
+drwx------  0 45895  45895       0 Apr 19 19:07 components/jquery/
+-rw-------  0 45895  45895   16689 Apr 19 19:07 components/jquery/jquery-migrate.js
+-rw-------  0 45895  45895     733 Apr 19 19:07 components/jquery/composer.json
+-rw-------  0 45895  45895     783 Apr 19 19:07 components/jquery/component.json
+-rw-------  0 45895  45895    7087 Apr 19 19:07 components/jquery/jquery-migrate.min.js
+-rw-------  0 45895  45895  240196 Apr 19 19:07 components/jquery/jquery.js
+-rw-------  0 45895  45895     336 Apr 19 19:07 components/jquery/README.md
+-rw-------  0 45895  45895       6 Apr 19 18:46 components/jquery/.gitignore
+-rw-------  0 45895  45895     144 Apr 19 19:07 components/jquery/package.json
+-rw-------  0 45895  45895   83095 Apr 19 19:07 components/jquery/jquery.min.js
+-rw-------  0 45895  45895     226 Apr 19 19:07 components/jquery/bower.json
+drwx------  0 45895  45895       0 Apr 19 19:07 components/handlebars/
+-rw-------  0 45895  45895    9636 Apr 19 18:48 components/handlebars/handlebars.runtime.js
+-rw-------  0 45895  45895     431 Apr 19 19:07 components/handlebars/component.json
+-rw-------  0 45895  45895   71956 Apr 19 18:48 components/handlebars/handlebars.js
+drwx------  0 45895  45895       0 Apr 19 19:07 components/ember/
+-rw-------  0 45895  45895     562 Apr 19 18:48 components/ember/composer.json
+-rw-------  0 45895  45895  191968 Apr 19 19:07 components/ember/ember.min.js
+-rw-------  0 45895  45895     440 Apr 19 19:07 components/ember/component.json
+-rw-------  0 45895  45895  770333 Apr 19 19:07 components/ember/ember.js
+-rw-------  0 45895  45895      45 Apr 19 19:07 components/ember/.gitignore
+-rw-------  0 45895  45895     222 Apr 19 18:48 components/ember/package.json
 $
 ```
 
