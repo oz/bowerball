@@ -1,41 +1,57 @@
 # Bowerball
 
 Bowerball is a little node program to stream tarballs over HTTP from [bower]
-component files.  But it's all [zyll]'s fault really.
+component files.  This means, that you POST a Bower-compatible `component.json`
+file, and the program will build, and stream back a tarball of the
+corresponding `components` directory.
 
-It is more a proof of concept than a “enterprise-ready” thing that you should
-put in production right now.  That say, you're welcome to hack and send
-pull-requests.  A running instance is available on Heroku:
-http://bowerball.herokuapp.com
+I would blame alcohol, but this is really another of [zyll]'s weird ideas that
+I could quickly hack.  It is more a proof of concept than a enterprisy thing:
+it's simple, it just works, so I hope it can be of some use. :)
+
+That said, you're welcome to hack and send pull-requests.  A running instance
+is available on Heroku: http://bowerball.herokuapp.com
+
+To test it from the your command-line, run:
+
+```
+curl -sX POST -d '{"dependencies": {"jquery":"~2.0", "ember":"~1.0"} }' \
+    http://bowerball.herokuapp.com/ | tar -tv
+```
 
 # Setup
 
-Start by installing the npm package with `npm install bowerball`.
+Start by installing the npm package with `npm install bowerball`, and run
+`node node_modules/bowerball/index.js`
 
 Alternatively, if you intend to code, grab the code:
 
-    $ git clone git://github.com/oz/bowerball.git
-    $ cd bowerball
-    $ npm install 
-    $ node index.js
+```
+$ git clone git://github.com/oz/bowerball.git
+$ cd bowerball
+$ npm install
+$ node index.js
+```
 
 # Example
 
-Once installed, start the bowerball server in a console, by calling
-`bowerball`.
+Once installed, start the bowerball server in a terminal by calling
+`bowerball`.  It takes no arguments, the only movable part is the listening
+port throught the `PORT` environment variable.
 
 ```
 $ bowerball
-Server ready, listening on http://127.0.0.1:8080
+Server ready, listening on http://0.0.0.0:8080
 ```
 
-In another term, create a sample bower component file:
+In another terminal, create a sample bower component file:
 
 ```
 $ cat > foo.json
 {
   "dependencies": {
-    "jquery": "~1.8.3"
+    "jquery": "~2.0",
+    "ember":  "~1.0"
   }
 }
 ^D
@@ -52,6 +68,9 @@ drwxr-xr-x 1000/1000         0 2012-12-20 17:52 components/jquery/
 -rw-r--r-- 1000/1000    275529 2012-12-20 15:56 components/jquery/jquery.js
 $
 ```
+
+And just like that, you got that pesky node dependency off your super
+successful Django on Rails application... ;)
 
 # License
 
